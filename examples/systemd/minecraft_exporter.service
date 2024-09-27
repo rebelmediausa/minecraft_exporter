@@ -1,0 +1,11 @@
+[Unit]
+Description=Minecraft Exporter
+Requires=minecraft_exporter.socket
+
+[Service]
+User=minecraft_exporter
+EnvironmentFile=/etc/sysconfig/minecraft_exporter
+ExecStart=/usr/sbin/minecraft_exporter --web.systemd-socket $OPTIONS
+
+[Install]
+WantedBy=multi-user.target

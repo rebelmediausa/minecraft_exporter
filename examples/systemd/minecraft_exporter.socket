@@ -1,0 +1,8 @@
+[Unit]
+Description=Minecraft Exporter
+
+[Socket]
+ListenStream=9940
+
+[Install]
+WantedBy=sockets.target
