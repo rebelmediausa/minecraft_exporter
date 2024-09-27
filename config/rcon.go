@@ -14,20 +14,14 @@
 package config
 
 import (
-	"log/slog"
-
 	"github.com/alecthomas/kingpin/v2"
 )
 
 var (
-	logger       *slog.Logger
 	rconAddress  = kingpin.Flag("rcon.address", "Address to use for connecting to RCON").PlaceHolder("localhost:25575").Default("localhost:25575").String()
 	rconPassword = kingpin.Flag("rcon.password", "Password to use for connecting to RCON").String()
 )
 
 func RCONInfo() (string, string) {
-	logger.Debug("Jellyfin URL", "Value", rconAddress)
-	logger.Debug("Jellyfin URL", "Value", rconPassword)
-
 	return *rconAddress, *rconPassword
 }
