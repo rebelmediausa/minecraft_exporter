@@ -1,11 +1,8 @@
-ARG ARCH="amd64"
-ARG OS="linux"
-FROM quay.io/prometheus/busybox-${OS}-${ARCH}:latest
+FROM alpine:3.20
 
-ARG ARCH="amd64"
-ARG OS="linux"
-COPY .build/${OS}-${ARCH}/minecraft_exporter /bin/minecraft_exporter
+ARG TARGETARCH
+COPY .build/linux-$TARGETARCH/jellyfin_exporter /bin/jellyfin_exporter
 
-EXPOSE      9940
+EXPOSE      9594
 USER        nobody
-ENTRYPOINT  [ "/bin/minecraft_exporter" ]
+ENTRYPOINT  [ "/bin/jellyfin_exporter" ]
