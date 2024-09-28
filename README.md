@@ -33,7 +33,8 @@ need to set the RCON address flag to use the docker container hostname.
 ```bash
 docker run -d \
   -p 9940:9940 \
-  rebelmediausa/minecraft-exporter:latest
+  rebelmediausa/minecraft-exporter:latest \
+  --rcon.address=minecraft:25575
 ```
 
 For Docker compose, similar flag changes are needed.
