@@ -1,4 +1,4 @@
-module github.com/rebelmediausa/minecraft_exporter
+module github.com/rebelcore/minecraft_exporter
 
 go 1.23
 

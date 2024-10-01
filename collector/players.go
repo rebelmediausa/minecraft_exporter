@@ -23,7 +23,7 @@ import (
 	"strings"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/rebelmediausa/minecraft_exporter/collector/utils"
+	"github.com/rebelcore/minecraft_exporter/collector/utils"
 )
 
 type playerCollector struct {
